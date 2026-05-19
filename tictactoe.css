@@ -8,6 +8,14 @@ body {
     height: 100vh;
 }
 
+.game-layout {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 80px;
+    min-height: 100vh;
+}
+
 .container {
     text-align: center;
     background-color:pink;
@@ -30,7 +38,7 @@ body {
 
 #start-button:hover {
     filter: brightness(0.9);
-}   
+}
 
 .board {
     display: grid;
@@ -57,4 +65,42 @@ body {
 
 .win {
   background: #e77295 !important;
+}
+
+.spb {
+    animation: gHmsSt 1.57s cubic-bezier(0.45, 0.05, 0.55, 0.95) infinite;
+
+    width: 130px;
+    height: 87.75px;
+
+    display: block;
+    margin-top: 400px;
+
+    will-change: transform;
+}
+
+.ptk {
+    animation: gHmsSt 1.47s cubic-bezier(0.45, 0.05, 0.55, 0.95) infinite;
+
+    width: 130px;
+    height: 87.75px;
+
+    display: block;
+    margin-top: -400px;
+
+    will-change: transform;
+}
+
+@keyframes gHmsSt {
+    0% {
+        transform: translateY(0px);
+    }
+
+    50% {
+        transform: translateY(-10px);
+    }
+
+    100% {
+        transform: translateY(0px);
+    }
 }
